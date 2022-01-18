@@ -42,10 +42,6 @@ window.addEventListener('click', function(e) {
     if(e.target.classList == "todoDone"){
         e.target.parentElement.classList.add('active');
         console.log(e.target.parentElement.classList)
-
-        if(e.target.parentElement.classList.contains('active')){
-            e.target.parentElement.classList.remove('active');
-        }
     }
 
    
