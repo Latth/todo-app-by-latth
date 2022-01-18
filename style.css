@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    --fontfam: 'Josefin Sans', sans-serif;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background: hsl(235, 21%, 11%);
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    color: #fff;
+    
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction:column;
+    padding-top: 5%;
+    z-index:3;
+    position: relative;
+}
+
+.bg-img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 35%;
+    background: url("images/bg-desktop-dark.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.wrap {
+    width: 35%;
+}
+
+
+.title-todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+.title-todo h1 {
+    letter-spacing: 1.3rem;
+    font-size: 4rem;
+}
+
+.addNewTodo {
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    padding: 2rem;
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+}
+.todoDone {
+    width: 2.5rem;
+    height: 2.5rem;
+    /* background:red; */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* background: red; */
+    border-radius: 50%;
+    display: block;
+    margin-right: 2rem;
+    cursor: pointer;
+    position: relative;
+}
+.todoDone::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: url("images/icon-check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    top: 0;
+    left: 0;
+    position: absolute;
+    visibility:hidden;
+}
+.addNewTodo input {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: #fff;
+    font-family: var(--fontfam);
+}
+
+
+.allTodos {
+    border-radius: .5rem;
+    max-width: 25%;
+    height: 40rem;
+}
+.todo-item {
+    background-color: hsl(235, 24%, 19%);
+    display: flex;
+    padding: 2.3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+.todo-item:nth-child(1) {
+    border-radius: .5rem .5rem 0 0;
+}
+.todo-item p {
+    font-size: 2rem;
+}
+.todo-item.active p {
+    color: rgba(255, 255, 255, 0.3);
+    text-decoration: line-through;
+}
+.todo-item.active .todoDone{
+    background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    border: 1px solid hsl(235, 24%, 19%);
+}
+.todo-item.active .todoDone::after{
+    visibility: visible;
+}
+
+
+.alltodo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: hsl(235, 24%, 19%);
+    padding: 1.6rem;
+    border-radius: 0 0 .5rem .5rem;
+}
+.alltodo-footer span {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.3rem;
+    margin-right: 1rem;
+}
+.alltodo-footer button {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+.alltodo-footer span.active {
+    color: hsl(220, 98%, 61%);
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+}
+
+footer a {
+    color: hsl(220, 98%, 61%);
+    text-decoration: none;
+    font-size: 1.6rem;
+}

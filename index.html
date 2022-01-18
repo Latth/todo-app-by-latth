@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Todo app</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="bg-img">
+    <!-- <img src="images/bg-desktop-dark.jpg" alt="bacground image" id="background-top-img"> -->
+  </div>
+  <main>
+
+    <div class="wrap">
+      <!-- Header -->
+      <div class="title-todo">
+        <h1>TODO</h1>
+        <img src="images/icon-sun.svg" alt="sun icon">
+      </div>
+
+      <!-- Add a new todo -->
+      <div class="addNewTodo">
+        <span id="todoDone"></span>
+        <input type="text" placeholder="Create a new todo..." id="newTodoText">
+      </div>
+      
+      <!-- Todos list -->
+      <div id="allTodos">
+
+      </div>
+      <div class="alltodo-footer">
+        <span id="left-length">0 items left</span>
+        <div class="filters">
+          <span id="filter-all" class="active">All</span>
+          <span id="filter-active">Active</span>
+          <span id="filter-copmpleted">Completed</span>
+        </div>
+        <button id="clear-completed">Clear Completed</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Ahmet Tunç Aras</a>.
+    </footer>
+  </main>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
